@@ -15,6 +15,7 @@ import "./global.css";
 function App() {
   const [users, serUsers] = useState([]);
 
+
   //Fetch Data from the DB
   const fetchData = async () => {
     const res = await findAll();
