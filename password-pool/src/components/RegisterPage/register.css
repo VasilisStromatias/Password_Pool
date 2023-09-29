@@ -1,1 +1,104 @@
-/* No CSS *//*# sourceMappingURL=register.css.map */
+.register-page {
+  height: 100%;
+  background-image: url(../../assets/register-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register-page .form-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 100px 10px;
+  width: 97%;
+}
+
+.register-page .form-inner {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.register-page .form-inner .page-title {
+  margin-bottom: 30px;
+}
+
+.register-page .form-inner .page-title h1 {
+  font-size: clamp(38px, 3vw, 42px);
+  text-align: center;
+  font-weight: 600;
+}
+
+.register-page .buttons {
+  max-width: 250px;
+  margin: clamp(30px, 3vw, 50px) auto 0;
+}
+
+.register-page .fieldset {
+  max-width: 400px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+
+.register-page .fieldset .inputs {
+  position: relative;
+}
+
+.register-page .fieldset .inputs.withError input {
+  border: 1px solid #d40606;
+}
+
+.register-page .fieldset .inputs.withError input:focus {
+  border: 2px solid #d40606;
+}
+
+.register-page .fieldset .inputs label {
+  display: none;
+}
+
+.register-page .fieldset .inputs input {
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  padding: 7px 20px;
+  min-height: 40px;
+  color: #363636;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.register-page .fieldset .inputs input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.register-page .fieldset .inputs input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.register-page .fieldset .inputs input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.register-page .fieldset .inputs input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.register-page .fieldset .inputs input:focus {
+  border: 2px solid #363636;
+}
+
+.register-page .fieldset .inputs input:focus-visible {
+  outline: 0;
+}
+/*# sourceMappingURL=register.css.map */
