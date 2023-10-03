@@ -8,6 +8,9 @@ import axios from "axios";
 import LoginPage from "./components/LoginPage/LoginPage";
 import HomePage from "./components/HomePage/HomePage";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
+import Index from "./components/Index/Index";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 //CSS
 import "./global.css";
@@ -30,11 +33,14 @@ function App() {
 
   return (
     <Router>
+        <Header />
       <Routes>
-        <Route exact path="/" element={<RegisterPage />} />
+        <Route exact path="/" element={<Index />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
