@@ -12,23 +12,23 @@
   font-family: "Manrope", sans-serif;
 }
 
-.main-button {
-  width: 100%;
-  border: 0;
-  background-color: transparent;
-  text-align: center;
-  font-size: clamp(14px, 1vw, 16px);
-  font-weight: 600;
-  background-color: #363636;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  &:hover {
-    background-color: #35447f;
-  }
-}
+// .main-button {
+//   width: 100%;
+//   border: 0;
+//   background-color: transparent;
+//   text-align: center;
+//   font-size: clamp(14px, 1vw, 16px);
+//   font-weight: 600;
+//   background-color: #363636;
+//   color: #fff;
+//   padding: 8px 20px;
+//   border-radius: 30px;
+//   cursor: pointer;
+//   transition: 0.3s ease-in-out;
+//   &:hover {
+//     background-color: #35447f;
+//   }
+// }
 
 .error-message {
   & ul {

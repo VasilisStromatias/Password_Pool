@@ -6,41 +6,18 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 16px;
   font-family: "Manrope", sans-serif;
-}
-
-.main-button {
-  width: 100%;
-  border: 0;
-  background-color: transparent;
-  text-align: center;
-  font-size: clamp(14px, 1vw, 16px);
-  font-weight: 600;
-  background-color: #363636;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-.main-button:hover {
-  background-color: #35447f;
 }
 
 .error-message ul {
   list-style: none;
   padding-right: 20px;
 }
-
 .error-message ul li {
   text-align: right;
   font-size: 13px;
-  color: #d40606;
+  color: rgb(212, 6, 6);
   font-weight: 600;
-}
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */

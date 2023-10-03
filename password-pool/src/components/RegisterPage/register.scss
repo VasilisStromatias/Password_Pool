@@ -70,3 +70,33 @@
     }
   }
 }
+
+button.main-button {
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: 0;
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(57,71,128);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all .5s ease;
+  cursor: pointer;
+ }
+ 
+ button.main-button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow:  rgb(57,71,128) 0px 7px 29px 0px;
+ }
+ 
+ button.main-button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: hsl(0, 0%, 100%) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+ }

@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "create-element.scss"
-    ],
-    "names": [],
-    "file": "create-element.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"create-element.css"}
