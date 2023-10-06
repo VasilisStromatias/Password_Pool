@@ -3,8 +3,7 @@ import React, { useId, useState } from "react";
 import { create } from "../../services/item";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 //CSS
 import "./register.css";
@@ -65,7 +64,7 @@ function RegisterPage() {
       password: "",
       rPassword: "",
     });
-    navigate('/home')
+    navigate("/home");
   };
 
   return (

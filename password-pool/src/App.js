@@ -18,7 +18,6 @@ import "./global.css";
 function App() {
   const [users, serUsers] = useState([]);
 
-
   //Fetch Data from the DB
   const fetchData = async () => {
     const res = await findAll();
@@ -33,11 +32,11 @@ function App() {
 
   return (
     <Router>
-        <Header />
+      <Header />
       <Routes>
         <Route exact path="/" element={<Index />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage users={users} />} />
         <Route path="/home" element={<HomePage />} />
       </Routes>
       <Footer />
