@@ -1,1 +1,24 @@
+.footer-lower {
+  padding-block: 10px;
+  background-color: rgba(57, 71, 128, 0.7);
+}
+
+.footer-lower-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+.footer-lower-inner span {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+}
 /*# sourceMappingURL=footer.css.map */

@@ -37,6 +37,12 @@
     padding: 0 10px;
     width: 97%;
   }
+  & .container-wrapper {
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px 0px;
+    padding: 50px;
+    background-color: #fff;
+  }
   & .container-inner {
     & .title {
       margin-bottom: 25px;
@@ -116,6 +122,21 @@
 
       a:hover::before {
         transform: translate3d(100%, 0, 0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .index-inner {
+    flex-direction: column;
+    & .right-wrapper {
+      padding-block: 30px;
+    }
+    & .left-inner {
+      & img {
+        height: 300px;
+        width: 100%;
       }
     }
   }

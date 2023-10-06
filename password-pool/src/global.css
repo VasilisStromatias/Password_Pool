@@ -6,7 +6,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
   font-family: "Manrope", sans-serif;
 }
@@ -15,9 +16,11 @@
   list-style: none;
   padding-right: 20px;
 }
+
 .error-message ul li {
   text-align: right;
   font-size: 13px;
-  color: rgb(212, 6, 6);
+  color: #d40606;
   font-weight: 600;
-}/*# sourceMappingURL=global.css.map */
+}
+/*# sourceMappingURL=global.css.map */
