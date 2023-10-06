@@ -1,1 +1,150 @@
+.index-page .index-wrapper .left-inner {
+  position: relative;
+}
+
+.index-page .index-wrapper .left-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(57, 71, 128, 0.5);
+  z-index: 1;
+}
+
+.index-page .index-wrapper .left-inner img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.index-page .index-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index-page .index-inner > div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.index-page .right-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index-page .right-inner {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 97%;
+}
+
+.index-page .container-inner .title {
+  margin-bottom: 25px;
+}
+
+.index-page .container-inner .title h1 {
+  text-align: center;
+  font-size: clamp(28px, 3vw, 32px);
+}
+
+.index-page .container-inner .short-description p {
+  text-align: center;
+  font-size: clamp(16px, 1vw, 18px);
+  margin-bottom: 20px;
+}
+
+.index-page .container-inner .short-description p:last-child {
+  margin-bottom: 0;
+}
+
+.index-page .container-inner .buttons {
+  max-width: 200px;
+  margin: 50px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.index-page .container-inner .buttons a {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #252e53;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 40px;
+}
+
+.index-page .container-inner .buttons a span {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.index-page .container-inner .buttons a:hover span {
+  color: #fff;
+}
+
+.index-page .container-inner .buttons a::before,
+.index-page .container-inner .buttons a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.index-page .container-inner .buttons a::before {
+  content: "";
+  background: #394780;
+  width: 120%;
+  left: -10%;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1), -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.index-page .container-inner .buttons a:hover::before {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
 /*# sourceMappingURL=index.css.map */
