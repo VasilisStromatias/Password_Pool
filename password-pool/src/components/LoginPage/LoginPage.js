@@ -3,12 +3,20 @@ import { create } from "../../services/item";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import { useNavigate } from "react-router-dom";
+import Multiselect from "multiselect-react-dropdown";
 
 import "./login.css";
 
 function LoginPage({ users }) {
   const navigate = useNavigate();
 
+  const cities = [
+    { name: "New York", code: "NY" },
+    { name: "Rome", code: "RM" },
+    { name: "London", code: "LDN" },
+    { name: "Istanbul", code: "IST" },
+    { name: "Paris", code: "PRS" },
+  ];
   const {
     register,
     handleSubmit,
@@ -73,11 +81,22 @@ function LoginPage({ users }) {
                     value={loginInput.lpass}
                   />
                 </div>
+
                 <div className="output">
                   <h2>Output</h2>
                   <p>Email: {loginInput.lemail}</p>
                   <p>Password :{loginInput.lpass}</p>
                 </div>
+                {/* <Multiselect
+                  displayValue="name"
+                  onKeyPressFn={function noRefCheck() {}}
+                  onRemove={function noRefCheck() {}}
+                  onSearch={function noRefCheck() {}}
+                  onSelect={function noRefCheck() {}}
+                  options={cities}
+                  selectionLimit={3}
+                  showCheckbox
+                /> */}
               </div>
             </form>
             <div className="buttons">
