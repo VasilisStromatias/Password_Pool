@@ -17,10 +17,10 @@ function LoginPage({ users }) {
     { name: "Istanbul", code: "IST" },
     { name: "Paris", code: "PRS" },
   ];
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm({ criteriaMode: "all" });
 
@@ -28,6 +28,9 @@ function LoginPage({ users }) {
     lemail: "",
     lpass: "",
   });
+  const [emailValid, setEmailValid] = useState(false);
+  const [passwordValid, setPasswordValid] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -39,15 +42,45 @@ function LoginPage({ users }) {
   };
 
   const submit = (data) => {
+    // Make an array with all the user emails
+    const emailList = users.map((item) => {
+      const email = item.email;
+
+      if (email === data.lemail) {
+        setEmailValid(true);
+      } else {
+        setEmailValid(false);
+      }
+
+      return email;
+    });
+
+    // Make an array with all the user passwords
+    const passwordList = users.map((item) => {
+      const password = item.password;
+
+      if (password === data.lpass) {
+        setPasswordValid(true);
+      } else {
+        setPasswordValid(false);
+      }
+
+      return password;
+    });
+
+    if (emailValid && passwordValid) {
+      setIsLogged(true);
+    } else {
+      setIsLogged(false);
+    }
+
+    console.log(isLogged);
     setLoginInput({
       ...loginInput,
       lemail: "",
       lpass: "",
     });
   };
-
-  // console.log(users);
-  // console.log(loginInput);
 
   return (
     <>
@@ -87,6 +120,7 @@ function LoginPage({ users }) {
                   <p>Email: {loginInput.lemail}</p>
                   <p>Password :{loginInput.lpass}</p>
                 </div>
+
                 {/* <Multiselect
                   displayValue="name"
                   onKeyPressFn={function noRefCheck() {}}
@@ -101,7 +135,7 @@ function LoginPage({ users }) {
             </form>
             <div className="buttons">
               <button className="main-button" onClick={handleSubmit(submit)}>
-                Register
+                Login
               </button>
             </div>
           </div>
