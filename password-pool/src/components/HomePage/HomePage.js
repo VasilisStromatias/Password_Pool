@@ -2,10 +2,11 @@ import React, { useId, useState } from "react";
 import "./home.css";
 
 function HomePage() {
-  const [input, setInput] = useState({ title: "", password: "" });
+  const [input, setInput] = useState({ title: "", username: "", password: "" });
   const [passwords, setPasswords] = useState([]);
 
   const titleId = useId();
+  const userNameId = useId();
   const passwordId = useId();
 
   const handleChange = (e) => {
@@ -23,11 +24,12 @@ function HomePage() {
         {
           id: crypto.randomUUID(),
           title: input.title,
+          username: input.username,
           password: input.password,
         },
       ];
     });
-    setInput({ title: "", password: "" });
+    setInput({ title: "", username: "", password: "" });
   };
 
   return (
@@ -35,7 +37,7 @@ function HomePage() {
       <form>
         <div className="form-fields">
           <div className="inputs">
-            <label htmlFor="title">Title</label>
+            <label htmlFor={titleId}>Title</label>
             <input
               id={titleId}
               type="text"
@@ -45,7 +47,17 @@ function HomePage() {
             />
           </div>
           <div className="inputs">
-            <label htmlFor="password">Password</label>
+            <label htmlFor={userNameId}>Username or email</label>
+            <input
+              id={userNameId}
+              type="text"
+              name="username"
+              value={input.username}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="inputs">
+            <label htmlFor={passwordId}>Password</label>
             <input
               id={passwordId}
               type="password"
@@ -67,6 +79,8 @@ function HomePage() {
                 <>
                   <li key={item.id}>
                     <span>{item.title}</span>
+                    <br></br>
+                    <span>{item.username}</span>
                     <br></br>
                     <span>{item.password}</span>
                   </li>
