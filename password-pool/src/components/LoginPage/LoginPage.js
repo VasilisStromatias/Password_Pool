@@ -10,14 +10,6 @@ import "./login.css";
 function LoginPage({ users }) {
   const navigate = useNavigate();
 
-  const cities = [
-    { name: "New York", code: "NY" },
-    { name: "Rome", code: "RM" },
-    { name: "London", code: "LDN" },
-    { name: "Istanbul", code: "IST" },
-    { name: "Paris", code: "PRS" },
-  ];
-
   const {
     register,
     handleSubmit,
@@ -35,6 +27,7 @@ function LoginPage({ users }) {
   const handleChange = (e) => {
     const value = e.target.value;
     const name = e.target.name;
+
     setLoginInput({
       ...loginInput,
       [name]: value,
@@ -47,12 +40,10 @@ function LoginPage({ users }) {
       const email = item.email;
 
       if (email === data.lemail) {
-        setEmailValid(true);
+        return setEmailValid(true);
       } else {
-        setEmailValid(false);
+        return setEmailValid(false);
       }
-
-      return email;
     });
 
     // Make an array with all the user passwords
@@ -60,26 +51,22 @@ function LoginPage({ users }) {
       const password = item.password;
 
       if (password === data.lpass) {
-        setPasswordValid(true);
+        return setPasswordValid(true);
       } else {
-        setPasswordValid(false);
+        return setPasswordValid(false);
       }
-
-      return password;
     });
 
     if (emailValid && passwordValid) {
       setIsLogged(true);
+      setLoginInput({
+        ...loginInput,
+        lemail: "",
+        lpass: "",
+      });
     } else {
       setIsLogged(false);
     }
-
-    console.log(isLogged);
-    setLoginInput({
-      ...loginInput,
-      lemail: "",
-      lpass: "",
-    });
   };
 
   return (
@@ -119,18 +106,10 @@ function LoginPage({ users }) {
                   <h2>Output</h2>
                   <p>Email: {loginInput.lemail}</p>
                   <p>Password :{loginInput.lpass}</p>
+                  <p>emailValid : {emailValid ? "true" : "false"}</p>
+                  <p>passwordValid : {passwordValid ? "true" : "false"}</p>
+                  <p>isLogged : {isLogged ? "true" : "false"}</p>
                 </div>
-
-                {/* <Multiselect
-                  displayValue="name"
-                  onKeyPressFn={function noRefCheck() {}}
-                  onRemove={function noRefCheck() {}}
-                  onSearch={function noRefCheck() {}}
-                  onSelect={function noRefCheck() {}}
-                  options={cities}
-                  selectionLimit={3}
-                  showCheckbox
-                /> */}
               </div>
             </form>
             <div className="buttons">
